@@ -12,6 +12,17 @@
  * $Author: leonlloyd $
 */
 
+global $pref;
+	
+	if (isset($pref['plug_installed']['e107slider'])) {
+
+		$jscript = "";
+
+	} else {
+
+		$jscript = "<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>";
+	}
+
 if(basename($_SERVER['PHP_SELF'])=='admin_typography.php' ) {
 echo "
 	<link rel='stylesheet' type='text/css' href='".e_PLUGIN_ABS."vanilla_plugin/style.css' />
@@ -54,9 +65,9 @@ echo "
 if(basename($_SERVER['PHP_SELF'])=='admin_cssedit.php' ) {
 echo "
 	<link rel='stylesheet' type='text/css' href='".e_PLUGIN_ABS."vanilla_plugin/style.css' />
+	".$jscript."
 	<script type='text/javascript' src='".e_PLUGIN."vanilla_plugin/ace/ace.js'></script>
 	<script type='text/javascript' src='".e_PLUGIN."vanilla_plugin/ace/mode-css.js'></script>
-	<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 	<script type='text/javascript' src='".e_PLUGIN."vanilla_plugin/custom-css.js'></script>
 	";
 } 
