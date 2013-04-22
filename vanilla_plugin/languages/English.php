@@ -182,6 +182,28 @@ define(VTP_TIPS_3, 'You can add your own background images to <em>e107_themes/va
 define(VTP_TIPS_4, 'If you are setting a background colour only you should leave all the other background fields blank.');
 define(VTP_TIPS_5, 'You can set transparent backgrounds by inputting RGBA values instead of HEX eg. <em> rgba(255,255,255,0.5)</em>');
 define(VTP_TIPS_6, '<a href=\'http://en.wikipedia.org/wiki/RGBA_color_space\' target=\'_blank\'>What are rgba colour vales?</a> <a href=\'http://hex2rgba.devoth.com/\' target=\'_blank\'>HEX to RGBA convertor</a>');
-define(VTP_TIPS_7, 'Text-shadows accept 4 values. They are the x-coordinate, y-coordinate, blur radius and colour. To disable text shadows set each value to <em>0px</em> and leave the colour value blank.');
+define(VTP_TIPS_7, 'Text-shadows accept 4 values. They are the x-coordinate, y-coordinate, blur radius and colour. To toggle the text shadows on or off, simply check or uncheck the box for each text style.');
 define(VTP_TIPS_8, '');
 define(VTP_TIPS_9, '');
+
+
+/*admin_check_update.php*/
+define(VANILLA_CHECK_00, "Check for Vanilla Updates");
+define(VANILLA_CHECK_01, "Current installed plugin version");
+define(VANILLA_CHECK_02, "Latest plugin version");
+define(VANILLA_CHECK_03, "Unable to retrieve version details!");
+define(VANILLA_CHECK_04, "There is an update for Vanilla Plugin available!");
+define(VANILLA_CHECK_05, "Check the website for more details");
+define(VANILLA_CHECK_06, "Your Vanilla Plugin version is higher than latest plugin version!");
+define(VANILLA_CHECK_07, "There is no update available. You are using the latest version of Vanilla Plugin");
+define(VANILLA_CHECK_08, "Check For Updates");
+
+define(VANILLA_CHECK_09, "Current installed theme version");
+define(VANILLA_CHECK_10, "Latest theme version");
+define(VANILLA_CHECK_11, "There is an update for Vanilla Theme available! To get your free update, log in to Xen Themes and download the new version from your account page. Upgrade instructions will be included in the theme package.");
+define(VANILLA_CHECK_12, "There is no update available. You are using the latest version of Vanilla Theme");
+define(VANILLA_CHECK_13, "Your Vanilla Theme version is higher than latest theme version!");
+
+define(VTP_ERROR_00, "Vanilla Theme appears to be missing!");
+define(VTP_ERROR_01, "It seems that you have not installed the Vanilla Theme.");
+define(VTP_ERROR_03, "This powerful plugin only works with the Vanilla Premium Theme, which is available from <a href='http://xenthemes.com/product/e107/vanilla'>Xen Themes</a>.");

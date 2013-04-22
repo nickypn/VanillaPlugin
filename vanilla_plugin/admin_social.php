@@ -61,7 +61,34 @@ if ( isset( $_POST['savesettings'] ) ) {
     $vtp_message =  '<div class="alert"><p>'.VTP_PLUGIN_2.'</p></div>';
 }
 
-$vtp_text = "
+$filename = e_THEME."vanilla_theme/vanilla_theme_ver.php";
+
+if(file_exists($filename)) {
+
+	$vt_ok = true;
+
+} else {
+		
+	$vt_ok = false;
+		
+}
+		
+if($vt_ok) {
+
+	$vtp_text = "";
+
+} else {
+
+	$vtp_text = "
+		<div class='error' style='margin-top:0;'>
+			<h3>".VTP_ERROR_00."</h3>
+			<p>".VTP_ERROR_01."</p>
+			<p>".VTP_ERROR_03."</p>
+		</div>";
+
+}
+
+$vtp_text .= "
 <form id='dataform' method='post' action='" . e_SELF . "?update'>
 
 	<div class='vtp-info'>

@@ -45,7 +45,7 @@ echo "
 	</script>";
 }
 
-if(basename($_SERVER['PHP_SELF'])=='admin_social.php' || basename($_SERVER['PHP_SELF'])=='admin_help.php') {
+if(basename($_SERVER['PHP_SELF'])=='admin_social.php' || basename($_SERVER['PHP_SELF'])=='admin_check_update.php' || basename($_SERVER['PHP_SELF'])=='admin_help.php') {
 echo "
 	<link rel='stylesheet' type='text/css' href='".e_PLUGIN_ABS."vanilla_plugin/style.css' />
 	";

@@ -36,11 +36,13 @@ if ( isset( $_POST['savesettings'] ) ) {
     
     $pref['vtp_titleSize'] =  $tp->toDB($_POST['vtp_titleSize']);
     $pref['vtp_titleColor'] =  $tp->toDB($_POST['vtp_titleColor']);
+    $pref['vtp_titleShadow_onoff'] = (int)($_POST['vtp_titleShadow_onoff']);
     $pref['vtp_titleShadow'] =  $tp->toDB($_POST['vtp_titleShadow']);
     $pref['vtp_titleShadow_left'] =  $tp->toDB($_POST['vtp_titleShadow_left']);
     $pref['vtp_titleShadow_bottom'] =  $tp->toDB($_POST['vtp_titleShadow_bottom']);
     $pref['vtp_titleShadow_blur'] =  $tp->toDB($_POST['vtp_titleShadow_blur']);
     $pref['vtp_navColor'] =  $tp->toDB($_POST['vtp_navColor']);
+    $pref['vtp_navShadow_onoff'] = (int)($_POST['vtp_navShadow_onoff']);
     $pref['vtp_navShadow'] =  $tp->toDB($_POST['vtp_navShadow']);
     $pref['vtp_navShadow_left'] =  $tp->toDB($_POST['vtp_navShadow_left']);
     $pref['vtp_navShadow_bottom'] =  $tp->toDB($_POST['vtp_navShadow_bottom']);
@@ -49,32 +51,38 @@ if ( isset( $_POST['savesettings'] ) ) {
     $pref['vtp_navBghover'] =  $tp->toDB($_POST['vtp_navBghover']);
     
     $pref['vtp_textColor'] =  $tp->toDB($_POST['vtp_textColor']);
+    $pref['vtp_textShadow_onoff'] = (int)($_POST['vtp_textShadow_onoff']);
     $pref['vtp_textShadow'] =  $tp->toDB($_POST['vtp_textShadow']);
     $pref['vtp_textShadow_left'] =  $tp->toDB($_POST['vtp_textShadow_left']);
     $pref['vtp_textShadow_bottom'] =  $tp->toDB($_POST['vtp_textShadow_bottom']);
     $pref['vtp_textShadow_blur'] =  $tp->toDB($_POST['vtp_textShadow_blur']);
     $pref['vtp_sidebarColor'] =  $tp->toDB($_POST['vtp_sidebarColor']);
+    $pref['vtp_sidebarShadow_onoff'] = (int)($_POST['vtp_sidebarShadow_onoff']);
     $pref['vtp_sidebarShadow'] =  $tp->toDB($_POST['vtp_sidebarShadow']);
     $pref['vtp_sidebarShadow_left'] =  $tp->toDB($_POST['vtp_sidebarShadow_left']);
     $pref['vtp_sidebarShadow_bottom'] =  $tp->toDB($_POST['vtp_sidebarShadow_bottom']);
     $pref['vtp_sidebarShadow_blur'] =  $tp->toDB($_POST['vtp_sidebarShadow_blur']);
     $pref['vtp_footerColor'] =  $tp->toDB($_POST['vtp_footerColor']);
+    $pref['vtp_footerShadow_onoff'] = (int)($_POST['vtp_footerShadow_onoff']);
     $pref['vtp_footerShadow'] =  $tp->toDB($_POST['vtp_footerShadow']);
     $pref['vtp_footerShadow_left'] =  $tp->toDB($_POST['vtp_footerShadow_left']);
     $pref['vtp_footerShadow_bottom'] =  $tp->toDB($_POST['vtp_footerShadow_bottom']);
     $pref['vtp_footerShadow_blur'] =  $tp->toDB($_POST['vtp_footerShadow_blur']);
     
     $pref['vtp_pageTitleColor'] =  $tp->toDB($_POST['vtp_pageTitleColor']);
+    $pref['vtp_pageTitleShadow_onoff'] = (int)($_POST['vtp_pageTitleShadow_onoff']);
     $pref['vtp_pageTitleShadow'] =  $tp->toDB($_POST['vtp_pageTitleShadow']);
     $pref['vtp_pageTitleShadow_left'] =  $tp->toDB($_POST['vtp_pageTitleShadow_left']);
     $pref['vtp_pageTitleShadow_bottom'] =  $tp->toDB($_POST['vtp_pageTitleShadow_bottom']);
     $pref['vtp_pageTitleShadow_blur'] =  $tp->toDB($_POST['vtp_pageTitleShadow_blur']);
     $pref['vtp_menuTitleColor'] =  $tp->toDB($_POST['vtp_menuTitleColor']);
+    $pref['vtp_menuTitleShadow_onoff'] = (int)($_POST['vtp_menuTitleShadow_onoff']);
     $pref['vtp_menuTitleShadow'] =  $tp->toDB($_POST['vtp_menuTitleShadow']);
     $pref['vtp_menuTitleShadow_left'] =  $tp->toDB($_POST['vtp_menuTitleShadow_left']);
     $pref['vtp_menuTitleShadow_bottom'] =  $tp->toDB($_POST['vtp_menuTitleShadow_bottom']);
     $pref['vtp_menuTitleShadow_blur'] =  $tp->toDB($_POST['vtp_menuTitleShadow_blur']);
     $pref['vtp_footerTitleColor'] =  $tp->toDB($_POST['vtp_footerTitleColor']);
+    $pref['vtp_footerTitleShadow_onoff'] = (int)($_POST['vtp_footerTitleShadow_onoff']);
     $pref['vtp_footerTitleShadow'] =  $tp->toDB($_POST['vtp_footerTitleShadow']);
     $pref['vtp_footerTitleShadow_left'] =  $tp->toDB($_POST['vtp_footerTitleShadow_left']);
     $pref['vtp_footerTitleShadow_bottom'] =  $tp->toDB($_POST['vtp_footerTitleShadow_bottom']);
@@ -86,8 +94,35 @@ if ( isset( $_POST['savesettings'] ) ) {
     
     $vtp_message =  '<div class="alert"><p>'.VTP_PLUGIN_2.'</p></div>';
 }
+
+$filename = e_THEME."vanilla_theme/vanilla_theme_ver.php";
+
+if(file_exists($filename)) {
+
+	$vt_ok = true;
+
+} else {
 		
-$vtp_text = "
+	$vt_ok = false;
+		
+}
+		
+if($vt_ok) {
+
+	$vtp_text = "";
+
+} else {
+
+	$vtp_text = "
+		<div class='error' style='margin-top:0;'>
+			<h3>".VTP_ERROR_00."</h3>
+			<p>".VTP_ERROR_01."</p>
+			<p>".VTP_ERROR_03."</p>
+		</div>";
+
+}
+		
+$vtp_text .= "
 <form name='settings_form' id='dataform' method='post' action='" . e_SELF . "?update'>
 	
 	<div class='vtp-info'>
@@ -230,6 +265,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_60."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_titleShadow_onoff' id='vtp_titleShadow_onoff' value='1' " . ( $pref['vtp_titleShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_titleShadow']).";'></div>
 					<select class='tbox' name='vtp_titleShadow_left' id='vtp_titleShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -351,6 +387,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_62."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_navShadow_onoff' id='vtp_navShadow_onoff' value='1' " . ( $pref['vtp_navShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_navShadow']).";'></div>
 					<select class='tbox' name='vtp_navShadow_left' id='vtp_navShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -505,6 +542,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_65."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_textShadow_onoff' id='vtp_textShadow_onoff' value='1' " . ( $pref['vtp_textShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_textShadow']).";'></div>
 					<select class='tbox' name='vtp_textShadow_left' id='vtp_textShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -626,6 +664,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_95."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_sidebarShadow_onoff' id='vtp_sidebarShadow_onoff' value='1' " . ( $pref['vtp_sidebarShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_sidebarShadow']).";'></div>
 					<select class='tbox' name='vtp_sidebarShadow_left' id='vtp_sidebarShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -747,6 +786,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_67."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_footerShadow_onoff' id='vtp_footerShadow_onoff' value='1' " . ( $pref['vtp_footerShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_footerShadow']).";'></div>
 					<select class='tbox' name='vtp_footerShadow_left' id='vtp_footerShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -884,6 +924,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_70."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_pageTitleShadow_onoff' id='vtp_pageTitleShadow_onoff' value='1' " . ( $pref['vtp_pageTitleShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_pageTitleShadow']).";'></div>
 					<select class='tbox' name='vtp_pageTitleShadow_left' id='vtp_pageTitleShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -1005,6 +1046,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_72."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_menuTitleShadow_onoff' id='vtp_menuTitleShadow_onoff' value='1' " . ( $pref['vtp_menuTitleShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_menuTitleShadow']).";'></div>
 					<select class='tbox' name='vtp_menuTitleShadow_left' id='vtp_menuTitleShadow_left' style='width:60px;' >
 						<option value='-5px' ".
@@ -1126,6 +1168,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_74."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_footerTitleShadow_onoff' id='vtp_footerTitleShadow_onoff' value='1' " . ( $pref['vtp_footerTitleShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_footerTitleShadow']).";'></div>
 					<select class='tbox' name='vtp_footerTitleShadow_left' id='vtp_footerTitleShadow_left' style='width:60px;' >
 						<option value='-5px' ".

@@ -38,6 +38,7 @@ if ( isset( $_POST['savesettings'] ) ) {
 	
 	$pref['vtp_btnbgColor'] =  $tp->toDB($_POST['vtp_btnbgColor']);
 	$pref['vtp_btntextColor'] =  $tp->toDB($_POST['vtp_btntextColor']);
+	$pref['vtp_btntextShadow_onoff'] = (int)($_POST['vtp_btntextShadow_onoff']);
 	$pref['vtp_btntextShadow'] =  $tp->toDB($_POST['vtp_btntextShadow']);
 	$pref['vtp_btntextShadow_left'] =  $tp->toDB($_POST['vtp_btntextShadow_left']);
     $pref['vtp_btntextShadow_bottom'] =  $tp->toDB($_POST['vtp_btntextShadow_bottom']);
@@ -71,7 +72,34 @@ if ( isset( $_POST['savesettings'] ) ) {
 
 //-----------------------------------------------------------------------------------------------------------+
 		
-$vtp_text = "
+$filename = e_THEME."vanilla_theme/vanilla_theme_ver.php";
+
+if(file_exists($filename)) {
+
+	$vt_ok = true;
+
+} else {
+		
+	$vt_ok = false;
+		
+}
+		
+if($vt_ok) {
+
+	$vtp_text = "";
+
+} else {
+
+	$vtp_text = "
+		<div class='error' style='margin-top:0;'>
+			<h3>".VTP_ERROR_00."</h3>
+			<p>".VTP_ERROR_01."</p>
+			<p>".VTP_ERROR_03."</p>
+		</div>";
+
+}
+
+$vtp_text .= "
 <form name='settings_form' id='dataform' method='post' action='" . e_SELF . "?update'>
 
 	<div class='vtp-info'>
@@ -225,6 +253,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:30%'>".VTP_PLUGIN_23."</td>
 				<td style='width:70%'>
+					<input type='checkbox' name='vtp_btntextShadow_onoff' id='vtp_btntextShadow_onoff' value='1' " . ( $pref['vtp_btntextShadow_onoff'] == 1?'checked="checked"':'' ) . "/>&nbsp;&nbsp;
 					<div class='previewbox' style='background:".$tp->toFORM($pref['vtp_btntextShadow']).";'></div>
 					<select class='tbox' name='vtp_btntextShadow_left' id='vtp_btntextShadow_left' style='width:60px;' >
 						<option value='-5px' ".

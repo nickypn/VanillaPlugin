@@ -33,7 +33,34 @@ if ( isset( $_POST['savesettings'] ) ) {
     $vtp_message =  '<div class="alert"><p>'.VTP_PLUGIN_2.'</p></div>';
 }
 
-$vtp_text = "
+$filename = e_THEME."vanilla_theme/vanilla_theme_ver.php";
+
+if(file_exists($filename)) {
+
+	$vt_ok = true;
+
+} else {
+		
+	$vt_ok = false;
+		
+}
+		
+if($vt_ok) {
+
+	$vtp_text = "";
+
+} else {
+
+	$vtp_text = "
+		<div class='error' style='margin-top:0;'>
+			<h3>".VTP_ERROR_00."</h3>
+			<p>".VTP_ERROR_01."</p>
+			<p>".VTP_ERROR_03."</p>
+		</div>";
+
+}
+
+$vtp_text .= "
 <form name='settings_form' id='dataform' method='post' action='" . e_SELF . "?update'>
 
 	<div class='vtp-info'>
@@ -145,7 +172,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:100%;'>
 					
-					<h4>Vanilla Theme v1.2</h4>
+					<h4>Vanilla Theme v1.2.1</h4>
 					<p class='licence'><a href='http://www.xenthemes.com'>Vanilla e107 Theme</a> (c) copyright 2013, Xen Themes.</p>
 					<p class='licence'>Dual licensed under the <a href='http://www.opensource.org/licenses/mit-license.php'>MIT</a> or <a href='http://www.gnu.org/licenses/gpl-2.0.txt'>GPL Version 2</a> licenses</p>
 				
@@ -189,7 +216,7 @@ $vtp_text .= "
 			<tr>
 				<td style='width:100%;'>
 				
-					<h4>Vanilla Theme Plugin v1.1</h4>
+					<h4>Vanilla Theme Plugin v1.2</h4>
 					<p class='licence'><a href='http://www.xenthemes.com'>Vanilla e107 Theme Plugin</a> (c) copyright 2013, Xen Themes.</p>
 					<p class='licence'>This plugin is licenced under the <a href='http://www.gnu.org/licenses/gpl-2.0.txt'>GPL Version 2</a> licence.</p>
 					

@@ -15,7 +15,10 @@
 if (!defined('e107_INIT')) {
     exit;
 }
+
 include_lan(e_PLUGIN."vanilla_plugin/languages/".e_LANGUAGE.".php");
+
+global $pageid;
 
 $action = basename($_SERVER['PHP_SELF'], '.php');
 
@@ -37,4 +40,7 @@ $var['admin_cssedit']['link'] = 'admin_cssedit.php';
 $var['admin_help']['text'] = VTP_PLUGIN_99;
 $var['admin_help']['link'] = 'admin_help.php';
 
-show_admin_menu(VTP_PLUGIN_100, $action, $var);
+$var['admin_check_update']['text'] = VANILLA_CHECK_08;
+$var['admin_check_update']['link'] = 'admin_check_update.php';
+
+show_admin_menu(VTP_PLUGIN_100, $pageid, $var);

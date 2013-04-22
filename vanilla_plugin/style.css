@@ -20,14 +20,14 @@ p.tips {
 	margin-bottom:10px;
 	}
 
-.tip,.alert {
+.tip,.alert,.error {
 	background-color: #fcf8e3;
 	border: 1px solid #fbeed5;
 	color: #c09853;
   	padding: 8px 14px;
   	margin: 18px auto;
   	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  	width:95%;
+  	width:100%;
   	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	box-sizing:	border-box;
@@ -59,8 +59,37 @@ p.tips {
 	color: #468847;
 	font-weight:700;
 	margin: 18px 0;
-  	width:100%;
 	}
+
+.error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  font-weight:700;
+  margin: 18px 0;
+}
+
+.alert a {
+  color: #468847;
+  text-decoration:underline;
+  }
+
+.alert a:hover {
+  color: #468847;
+}
+
+.error a {
+  color: #b94a48;
+  text-decoration:underline;
+}
+
+.error a:hover {
+  color: #b94a48;
+}
+
+.tip h3,.alert h3,.error h3,.tip h4,.alert h4,.error h4 {
+  margin-bottom:10px;
+}
 	
 table.vtp-table {
   	max-width: 100%;
@@ -413,3 +442,8 @@ table.vtp-table code {
 	font-weight:400;
 	margin-bottom:1.3em;
 	}
+h4 {
+  margin-bottom:1em;
+  border-bottom:1px solid #dcdcdc;
+  padding-bottom:10px;
+}

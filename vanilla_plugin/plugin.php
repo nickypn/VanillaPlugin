@@ -14,7 +14,7 @@
 
 include_lan(e_PLUGIN."vanilla_plugin/languages/".e_LANGUAGE.".php");
 $eplug_name = 'Vanilla Theme Plugin';
-$eplug_version = '1.1';
+$eplug_version = '1.2';
 $eplug_author = 'Leon Lloyd (roofdog)';
 $eplug_url = 'http://www.xenthemes.com/';
 $eplug_email = 'support@xenthemes.com';
@@ -27,6 +27,7 @@ $eplug_conffile = 'admin_config.php';
 $eplug_icon = $eplug_folder . '/images/vanilla-logo-32.png';
 $eplug_icon_small = $eplug_folder . '/images/vanilla-logo-16.png';
 $eplug_caption = 'Vanilla Theme Plugin';
+$eplug_status = TRUE;
 $eplug_prefs = array(
 
 'vtp_site_title'=>0,
@@ -148,7 +149,20 @@ $eplug_prefs = array(
 'vtp_fblike'=>1,
 'vtp_inshare'=>1,
 'vtp_googleplus'=>1,
-'vtp_social_text'=>'If you enjoyed this post, please consider subscribing to our RSS feed, thanks!'
+'vtp_social_text'=>'If you enjoyed this post, please consider subscribing to our RSS feed, thanks!',
+
+'vtp_gradient'=>1,
+'vtp_titleSize'=>'1.5em',
+'vtp_navBg'=>'#111',
+'vtp_navBghover'=>'#000',
+'vtp_tweet'=>1,
+'vtp_plusone'=>1,
+'vtp_fbbtn'=>1,
+'vtp_fbid'=>'',
+'vtp_userBar'=>0,
+'vtp_bannerToggle'=>1,
+'vtp_twitter_username'=>'XenThemes',
+'custom_css'=>''
 );
 
 $eplug_link = false;
@@ -160,19 +174,16 @@ $eplug_tables = '';
 $upgrade_alter_tables = '';
 
 $upgrade_add_prefs = array (
-	'vtp_gradient'=>1,
-	'vtp_titleSize'=>'1.5em',
-	'vtp_navBg'=>'#111',
-	'vtp_navBghover'=>'#000',
-	'vtp_tweet'=>1,
-	'vtp_plusone'=>1,
-	'vtp_fbbtn'=>1,
-	'vtp_fbid'=>'',
-	'vtp_userBar'=>0,
-	'vtp_bannerToggle'=>1,
-	'vtp_twitter_username'=>'XenThemes',
-	'custom_css'=>''
-);
+	'vtp_btntextShadow_onoff'=>1,
+	'vtp_titleShadow_onoff'=>1,
+	'vtp_navShadow_onoff'=>1,
+	'vtp_textShadow_onoff'=>1,
+	'vtp_sidebarShadow_onoff'=>1,
+	'vtp_footerShadow_onoff'=>1,
+	'vtp_pageTitleShadow_onoff'=>1,
+	'vtp_menuTitleShadow_onoff'=>1,
+	'vtp_footerTitleShadow_onoff'=>1
+	);
 
 $upgrade_remove_prefs = '';
 $eplug_upgrade_done = VTP_PLUGIN_PL_3;
