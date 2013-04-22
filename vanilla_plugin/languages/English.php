@@ -1,15 +1,16 @@
 <?php
-	/*************************************************
-	
-	Vanilla Theme Plugin
-	
-	English Language file
-	       
-	$version: 1.0
-	$file_author: Leon Lloyd (roofdog)  
-	http://www.xenthemes.com 
-	
-	*************************************************/
+/*
+ * Vanilla Plugin 1.2
+ *
+ * Copyright (C) 2007-2011 Xen Themes (xenthemes.com)
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://www.gnu.org/licenses/gpl-3.0.txt)
+ *
+ * $Source: 
+ * $Revision: 1.2 $
+ * $Date: 22/04/2013 $
+ * $Author: leonlloyd $
+*/
 
 /* PLUGIN LANGUAGES */
 
@@ -40,6 +41,7 @@ define(VTP_PLUGIN_96, 'Activate sitewide CSS3 rounded corners:');
 define(VTP_PLUGIN_122, 'Activate User Bar:');
 define(VTP_PLUGIN_123, '');
 define(VTP_PLUGIN_124, 'Activate {BANNER} shortcode above main navigation:');
+define(VTP_PLUGIN_125, 'Activate {SEARCH} shortcode above sidebar:');
 
 define(VTP_PLUGIN_20, 'Site Buttons');
 define(VTP_PLUGIN_21, 'Button background colour:');

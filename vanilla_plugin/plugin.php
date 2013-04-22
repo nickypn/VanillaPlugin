@@ -1,14 +1,14 @@
 <?php
 /*
- * Vanilla Plugin 1.1
+ * Vanilla Plugin 1.2
  *
  * Copyright (C) 2007-2011 Xen Themes (xenthemes.com)
  * Released under the terms and conditions of the
  * GNU General Public License (http://www.gnu.org/licenses/gpl-3.0.txt)
  *
  * $Source: 
- * $Revision: 1.1 $
- * $Date: 08/04/2013 $
+ * $Revision: 1.2 $
+ * $Date: 22/04/2013 $
  * $Author: leonlloyd $
 */
 
@@ -182,7 +182,8 @@ $upgrade_add_prefs = array (
 	'vtp_footerShadow_onoff'=>1,
 	'vtp_pageTitleShadow_onoff'=>1,
 	'vtp_menuTitleShadow_onoff'=>1,
-	'vtp_footerTitleShadow_onoff'=>1
+	'vtp_footerTitleShadow_onoff'=>1,
+	'vtp_searchToggle'=>1
 	);
 
 $upgrade_remove_prefs = '';

@@ -1,13 +1,13 @@
 <?php
 /*
- * Vanilla Plugin 1.1
+ * Vanilla Plugin 1.2
  *
  * Copyright (C) 2007-2011 Xen Themes (xenthemes.com)
  * Released under the terms and conditions of the
  * GNU General Public License (http://www.gnu.org/licenses/gpl-3.0.txt)
  *
  * $Source: 
- * $Revision: 1.1 $
+ * $Revision: 1.2 $
  * $Date: 08/04/2013 $
  * $Author: leonlloyd $
 */
@@ -35,6 +35,7 @@ if ( isset( $_POST['savesettings'] ) ) {
 	$pref['vtp_borderRadius'] = (int)($_POST['vtp_borderRadius']);
 	$pref['vtp_userBar'] = (int)($_POST['vtp_userBar']);
 	$pref['vtp_bannerToggle'] = (int)($_POST['vtp_bannerToggle']);
+	$pref['vtp_searchToggle'] = (int)($_POST['vtp_searchToggle']);
 	
 	$pref['vtp_btnbgColor'] =  $tp->toDB($_POST['vtp_btnbgColor']);
 	$pref['vtp_btntextColor'] =  $tp->toDB($_POST['vtp_btntextColor']);
@@ -176,6 +177,12 @@ $vtp_text .= "
 				<td style='width:30%'>".VTP_PLUGIN_124."</td>
 				<td style='width:70%'>
 					<input type='checkbox' name='vtp_bannerToggle' id='vtp_bannerToggle' value='1' " . ( $pref['vtp_bannerToggle'] == 1?'checked="checked"':'' ) . "/>
+				</td>
+			</tr>
+			<tr>
+				<td style='width:30%'>".VTP_PLUGIN_125."</td>
+				<td style='width:70%'>
+					<input type='checkbox' name='vtp_searchToggle' id='vtp_searchToggle' value='1' " . ( $pref['vtp_searchToggle'] == 1?'checked="checked"':'' ) . "/>
 				</td>
 			</tr>
 			<tr>
