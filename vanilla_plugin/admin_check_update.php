@@ -1,4 +1,16 @@
 <?php
+/*
+ * Vanilla Plugin 1.2
+ *
+ * Copyright (C) 2007-2011 Xen Themes (xenthemes.com)
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://www.gnu.org/licenses/gpl-3.0.txt)
+ *
+ * $Source: 
+ * $Revision: 1.2 $
+ * $Date: 22/04/2013 $
+ * $Author: leonlloyd $
+*/
 
 
 $eplug_admin = true;
@@ -33,7 +45,7 @@ if ($vp_current_version == "" or $vp_latest_version == "") {
 } else {
   if ($vp_current_version < $vp_latest_version) {
       $text .= "<div class='alert'>".VANILLA_CHECK_04."</div>";
-      $text .= VANILLA_CHECK_05." <a href='http://xenthemes.com'>http://xenthemes.com</a></div>";
+      $text .= VANILLA_CHECK_05." <a href='http://xenthemes.com'>Xen Themes</a></div>";
   } elseif ( $vp_current_version > $vp_latest_version ) {
       $text .= "<div class='error'>".VANILLA_CHECK_06."</div>";
   } elseif ( $vp_current_version == $vp_latest_version ) {
@@ -48,7 +60,7 @@ if ($vt_current_version == "" or $vt_latest_version == "") {
 } else {
   if ($vt_current_version < $vt_latest_version) {
       $text .= "<div class='alert'>".VANILLA_CHECK_11."</div>";
-      $text .= VANILLA_CHECK_05." <a href='http://xenthemes.com'>http://xenthemes.com</a></div>";
+      $text .= VANILLA_CHECK_05." <a href='http://xenthemes.com'>Xen Themes</a></div>";
   } elseif ( $vt_current_version > $vt_latest_version ) {
       $text .= "<div class='error'>".VANILLA_CHECK_06."</div>";
   } elseif ( $vt_current_version == $vt_latest_version ) {

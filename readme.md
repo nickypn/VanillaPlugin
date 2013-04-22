@@ -10,6 +10,7 @@ The Vanilla Plugin is to be used in conjunction with the Vanilla Premium e107 Th
 
 * Added update notification
 * Added text-shadow toggles
+* Added toggle {SEARCH} shortcode
 
 = 1.1 - 11 April 2012
 
@@ -17,6 +18,7 @@ The Vanilla Plugin is to be used in conjunction with the Vanilla Premium e107 Th
 * Added Ace CSS Editor
 * Added toggle for Users Bar
 * Added toggle for topbar gradient
+* Added toggle {BANNER} shortcode
 * Added options for navigation backgrounds/hover state
 * Added toggle for social media buttons above news
 * Fixed BBCode formatting issue
