@@ -21,23 +21,23 @@ define(VTP_PLUGIN_3, 'Запиши настройките');
 /* admin_config.php */
 define(VTP_PLUGIN_4, 'Главни настройки');
 
-define(VTP_PLUGIN_5, 'Site Title');
-define(VTP_PLUGIN_6, 'Logo image or text header:');
-define(VTP_PLUGIN_7, 'Text');
-define(VTP_PLUGIN_8, 'Image');
-define(VTP_PLUGIN_9, 'Logo image:');
+define(VTP_PLUGIN_5, 'Име на сайта');
+define(VTP_PLUGIN_6, 'Лого картинка или текст:');
+define(VTP_PLUGIN_7, 'Текст');
+define(VTP_PLUGIN_8, 'Картинка');
+define(VTP_PLUGIN_9, 'Лого картинка:');
 
-define(VTP_PLUGIN_10, 'Site Layout');
-define(VTP_PLUGIN_11, 'Sidebar alignment:');
-define(VTP_PLUGIN_12, 'Main content left - sidebar right');
-define(VTP_PLUGIN_13, 'Main content right - sidebar left');
-define(VTP_PLUGIN_14, 'Full width layout:<span class="smalltext">List pages or directories separated by a space, for example:</span><code>download.php forum/ contact.php</code>');
-define(VTP_PLUGIN_15, 'Footer menu width:<span class="smalltext">The footer contains one menu area. Set the width to determine how many menus to display in a row.</span>');
+define(VTP_PLUGIN_10, 'Оформление на сайта');
+define(VTP_PLUGIN_11, 'Подравняване на страничната лента:');
+define(VTP_PLUGIN_12, 'Главно съдържание вляво - лента вдясно');
+define(VTP_PLUGIN_13, 'Главно съдържание вдясно - лента вляво');
+define(VTP_PLUGIN_14, 'Оформление в пълна ширина:<span class="smalltext">Списък страници или директории, разделени с интервал, например както:</span><code>download.php forum/ contact.php</code>');
+define(VTP_PLUGIN_15, 'Ширина на долен колонтитул:<span class="smalltext">Долният колонтитул съдържа една меню област. Определете ширината, за да определите колко менюта да се покажат в един ред.</span>');
 define(VTP_PLUGIN_16, '100% (1 menu)');
 define(VTP_PLUGIN_17, '50% (2 menus)');
 define(VTP_PLUGIN_18, '33% (3 menus)');
 define(VTP_PLUGIN_19, '25% (4 menus)');
-define(VTP_PLUGIN_96, 'Activate sitewide CSS3 rounded corners:');
+define(VTP_PLUGIN_96, 'Активиране на sitewide CSS3 заоблени ъгли:');
 define(VTP_PLUGIN_122, 'Activate User Bar:');
 define(VTP_PLUGIN_123, '');
 define(VTP_PLUGIN_124, 'Activate {BANNER} shortcode above main navigation:');
